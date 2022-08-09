@@ -1,48 +1,46 @@
 <?php
+require_once 'ModeloBase.php';
 
-class Usuario
-{
-    private $_nombre;
-    private $_apellido;
-    private $_email;
-    private $_password;
+class Usuario extends ModeloBase{
+	public $nombre;
+	public $apellidos;
+	public $email;
+	public $password;
+	
+	public function __construct() {
+		parent::__construct();
+	}
+	
+	function getNombre() {
+		return $this->nombre;
+	}
 
-    public function setNombre($nombre){
-        $this->_nombre = $nombre;
-    }
+	function getApellidos() {
+		return $this->apellidos;
+	}
 
-    public function getNombre(){
-        return $this->_nombre;
-    }
+	function getEmail() {
+		return $this->email;
+	}
 
-    public function setApellido($apellido){
-        $this->_apellido = $apellido;
-    }
+	function getPassword() {
+		return $this->password;
+	}
 
-    public function getApellido(){
-        return $this->_apellido;
-    }
+	function setNombre($nombre) {
+		$this->nombre = $nombre;
+	}
 
-    public function setEmail($email){
-        $this->_email = $email;
-    }
+	function setApellidos($apellidos) {
+		$this->apellidos = $apellidos;
+	}
 
-    public function getEmail(){
-        return $this->_email;
-    }
+	function setEmail($email) {
+		$this->email = $email;
+	}
 
-    public function setPassword($password){
-        $this->_password = $password;
-    }
+	function setPassword($password) {
+		$this->password = $password;
+	}
 
-    public function getPassword(){
-        return $this->_password;
-    }
-
-    public function mostrarTodo(){
-        return "todos los usuarios";
-    }
 }
-
-
-?>
